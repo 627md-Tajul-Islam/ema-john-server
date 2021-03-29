@@ -13,7 +13,8 @@ const app = express()
 app.use(bodyParser.json());
 app.use(cors());
 
-const port = 5000
+const port = 5000;
+
 app.get('/', (request, response)=>{
 	response.send('working');
 })
