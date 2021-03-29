@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 
@@ -13,6 +14,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const port = 5000
+app.get('/', (request, response)=>{
+	response.send('working')
+})
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
